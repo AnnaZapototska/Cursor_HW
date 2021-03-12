@@ -9,18 +9,14 @@
 #     """
 
 class Laptop:
-    def __init__(self, battery):
-        self.battery = battery
-    def __str__(self):
-        return f'Laptop battery - {self.battery}'
+    def __init__(self):
+        self.battery = Battery(100)
 
 class Battery:
     def __init__(self, charging):
         self.charging = charging
-    def __str__ (self):
-        return f'Battery has - {self.charging}'
-battery = Laptop('ABD')
-print(battery)
+
+laptop = Laptop()
 
 # 2.
 
