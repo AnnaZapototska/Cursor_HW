@@ -180,6 +180,19 @@ print(person.age)
 Person.age = 22
 print(person.age)
 
+# 9.2
+class Person:
+    name = "John"
+    age = 36
+    country = "USA"
+
+
+person = Person()
+
+setattr(person, 'age', 45)
+print(person.age)
+
+
 # 10.
 class Student:
     """
