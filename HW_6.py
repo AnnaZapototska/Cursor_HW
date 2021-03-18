@@ -250,6 +250,9 @@ class StarGardener(Gardener):
             if all_plants.state == 3:
                 return True
             return False
+    def __repr__(self):
+        return f'{self.name}'
+
 # HW        
 class AlivePests(Pests):
     def __init__(self, pests_type, quantity):
