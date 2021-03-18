@@ -242,8 +242,8 @@ class StarGardener(Gardener):
         print('Gardner is finished')
 
     def poison_pests(self):
-        pests.quantity = 0
-        print("Poisoning pests... \nThe Gardener poisoned all pests. \nNow the garden is clean!")
+        pests.quantity == 0
+        print('The garden is clean!')
 
     def check_states(self):
         for all_plants in self.plants:
@@ -252,12 +252,8 @@ class StarGardener(Gardener):
             return False
 # HW        
 class AlivePests(Pests):
-    def init(self, pests_type, quantity):
-
-        super(AlivePests, self).init(pests_type, quantity)
-
-        self.pests_type = pests_type
-        self.quantity = quantity
+    def __init__(self, pests_type, quantity):
+        super(AlivePests, self).__init__(pests_type, quantity)
 
     def eat(self):
         for pest in range(self.quantity):
